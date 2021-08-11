@@ -14,6 +14,8 @@ def guess(x):
 
 guess(100)
 
+def computerGuess()
+
 
 
 
