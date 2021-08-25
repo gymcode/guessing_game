@@ -36,6 +36,8 @@ def ComputerGuessing(x):
     print(f"Yaaaaay this number inputted is a correct number"); 
 
 
-ComputerGuessing(10)
+# ComputerGuessing(10)
+
+guess(10)
 
         
