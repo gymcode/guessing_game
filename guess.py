@@ -1,4 +1,4 @@
-from math import isinf
+
 import random; 
 
 # creating a function for the computer guess
@@ -22,9 +22,12 @@ def guess(x):
 def ComputerGuessing(x):
     low = 1; 
     high = x; 
-    feedback = "";
-    while feedback != "c" and low != high: 
-        randomNumber = random.randint(low, high);
+    feedback = '';
+    while feedback != "c": 
+        if low != high:
+            randomNumber = random.randint(low, high);        
+        else: 
+            randomNumber = low;
         feedback = input(f"is the {randomNumber} guessed too high or too low or correct? ")
         if feedback == "h": 
             high = randomNumber + 1 
