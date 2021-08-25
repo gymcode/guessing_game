@@ -1,24 +1,64 @@
-const readline = require('readline')
+// traditional method 
+// const readline = require('readline')
 
-// accepting user input 
-readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-})
+// // accepting user input 
+// readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// })
+
+// var HumanResponse = ""
+// readline.question("What is your choice: Rock, Paper, Scissors", (answer)=>{
+//     console.log(`i'm going for {answer}`)
+//     HumanResponse = answer
+//     readline.close();
+// })
+const prompt = require('prompt-sync')({
+    'fake_val': 'OPTIONAL CONFIG VALUES HERE'
+});
+
+
+const HumanResponse = prompt("What is your choice: Rock, Paper, Scissors: ")
+
+console.log(HumanResponse)
 
 // function for the computer 
 function Computer() {
     let computer = Math.random()
     if (computer <= 0.39) {
-        
         computer = "Rock"
         console.log(computer)
+        return computer
     } else if (computer <= 0.69) {
         computer = "Paper"
         console.log(computer)
+        return computer
     } else {
         computer = "Scissors"
         console.log(computer)
+        return computer
     }
 }
+
+function is_win(human, computer) {
+    if (human === "Paper" && computer === "Rock" || human === "Scissors" && computer === "Paper" || human === "Rock" && computer === "Scissors") {
+        return true
+    } 
+    return false
+}
+
+var results = is_win()
+console.log(results)
+Computer()
+
+function let_play(human, computer){
+    if (is_win()) {
+        console.log("You Won") 
+    } else if (human === computer) {
+        console.log("it's a draw") 
+    } else {console.log("You Lost") } 
+    
+}
+
+// let_play(HumanResponse, Computer())
 
