@@ -1,18 +1,4 @@
-// traditional method 
-// const readline = require('readline')
 
-// // accepting user input 
-// readline.createInterface({
-//     input: process.stdin,
-//     output: process.stdout
-// })
-
-// var HumanResponse = ""
-// readline.question("What is your choice: Rock, Paper, Scissors", (answer)=>{
-//     console.log(`i'm going for {answer}`)
-//     HumanResponse = answer
-//     readline.close();
-// })
 const prompt = require('prompt-sync')({
     'fake_val': 'OPTIONAL CONFIG VALUES HERE'
 });
@@ -41,10 +27,13 @@ function Computer() {
 }
 
 function is_win(human, computer) {
-    if (human === "Paper" && computer === "Rock" || human === "Scissors" && computer === "Paper" || human === "Rock" && computer === "Scissors") {
+    if (human == "Paper" && computer == "Rock") {
         return true
-    } 
-    return false
+    } else if (human == "Scissors" && computer == "Paper" ){
+        return true
+    } else if (human == "Rock" && computer == "Scissors") {
+        return true
+    } else return false
 }
 
 var results = is_win()
