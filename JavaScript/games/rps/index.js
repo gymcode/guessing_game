@@ -49,5 +49,5 @@ function let_play(human, computer){
     
 }
 
-// let_play(HumanResponse, Computer())
+
 
