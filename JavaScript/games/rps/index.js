@@ -40,14 +40,15 @@ var results = is_win()
 console.log(results)
 Computer()
 
-// function let_play(human, computer){
-//     if (is_win()) {
-//         console.log("You Won") 
-//     } else if (human === computer) {
-//         console.log("it's a draw") 
-//     } else {console.log("You Lost") } 
+let_play()
+function let_play(human, computer){
+    if (is_win()) {
+        console.log("You Won") 
+    } else if (human === computer) {N
+        console.log("it's a draw") 
+    } else {console.log("You Lost") } 
     
-// }
+}
 
 
 
