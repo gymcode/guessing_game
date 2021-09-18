@@ -21,7 +21,7 @@ function Computer() {
         return computer
     } else {
         computer = "Scissors"
-        console.log(computer)
+        
         return computer
     }
 }
